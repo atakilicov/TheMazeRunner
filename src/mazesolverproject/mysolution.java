@@ -5,6 +5,7 @@ public class mysolution {
     public static void main(String[] args) {
         Solution();
         
+        
 
     }
 
@@ -14,33 +15,40 @@ public class mysolution {
         Stack stack = new Stack<>();
         int x = 1;
         int y = 1;
-        while (maze2D[x][y] != 1 && (x != 9 || y != 9)) {
-            if (maze2D[x + 1][y] == 0) { // Sağa gidebilir durumdaysa
+
+
+        //int[][] == 3 is visited cell
+
+        while (!(maze2D[x][y] == 1 && (x == 9 && y == 9))) {
+            if (maze2D[x + 1][y] == 0 )
+             { // go right
                 x++;
                 maze2D[x][y] = 2;
                 print2dmaze(maze2D);
                 stack.push(maze.getCell(x, y));
-            } else if (maze2D[x][y + 1] == 0) { // Sağa gidilemiyorsa ve aşağıya gidilebilir durumdaysa
+            } else if (maze2D[x][y + 1] == 0) { // if not right , go down
                 y++;
                 maze2D[x][y] = 2;
                 print2dmaze(maze2D);
                 stack.push(maze.getCell(x, y));
-            } else if (maze2D[x][y - 1] == 0) { // Yukarıya gidilebilir durumdaysa
+            } else if (maze2D[x][y - 1] == 0) { // if not down , go up
                 y--;
                 maze2D[x][y] = 2;
                 print2dmaze(maze2D);
                 stack.push(maze.getCell(x, y));
-            } else if (maze2D[x - 1][y] == 0) { // Sola gidilebilir durumdaysa
+            } else if (maze2D[x - 1][y] == 0) { // if not up, go left
                 x--;
                 maze2D[x][y] = 2;
                 print2dmaze(maze2D);
                 stack.push(maze.getCell(x, y));
-            } else { //sokak çıkmazsa
-                while()// sokak çıkmaz olduğu sürece
+            } else { 
+                maze2D[x][y]=3;
+                
 
-                stack.pop();
+               
             }
         }
+        
     
         
     
@@ -65,4 +73,7 @@ public class mysolution {
         MazeUtility.plotMaze(maze);
 
     }
+
+    
+
 } 
