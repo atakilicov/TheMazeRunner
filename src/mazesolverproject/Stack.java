@@ -8,7 +8,7 @@ public class Stack<T> {
     }
     
     public boolean isEmpty() {
-        if (topState==null)
+        if (top==null)
             return true;
         return false;
     }
@@ -28,7 +28,7 @@ public class Stack<T> {
 
     private static class Node<T>{
         Node<T> next = null;
-        T data
+        T data;
 
         Node(T data){
             this.data = data;

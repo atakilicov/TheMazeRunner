@@ -37,7 +37,7 @@ public class MazeGenerator {
       }
   }
 
-  private class Cell {
+   private class Cell {
     int x, y; 
     ArrayList<Cell> neighbors = new ArrayList<>();
     boolean visited = false;    
@@ -281,4 +281,6 @@ public class MazeGenerator {
       }
       return output;
   }
+
+ 
 }

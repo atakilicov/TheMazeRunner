@@ -1,5 +1,7 @@
 package mazesolverproject;
 
+
+
 public class MazeSolverProject {
 
     public static void main(String[] args) {
@@ -9,7 +11,10 @@ public class MazeSolverProject {
         Stack path = new Stack();
 
         maze[1][1]=2;
-        MazeUtility.plotMaze(maze);        
+        MazeUtility.plotMaze(maze);
+        
+      
+
 
         // To do: starting from the coordinates [1,1], use the path stack to navigate in the maze and 
         // find a way to [2*grid-1, 2*grid-1] coordinates
