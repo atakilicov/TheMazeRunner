@@ -1,5 +1,3 @@
-package mazesolverproject;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -37,7 +35,7 @@ public class MazeGenerator {
       }
   }
 
-   private class Cell {
+   private class Cell  {
     int x, y; 
     ArrayList<Cell> neighbors = new ArrayList<>();
     boolean visited = false;    
@@ -265,9 +263,7 @@ public class MazeGenerator {
       }
   }
 
-  public void draw() {
-      System.out.print(this);
-  }
+  public void draw() {System.out.print(this);}
   
   @Override
   public String toString() {

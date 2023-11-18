@@ -1,5 +1,3 @@
-package mazesolverproject;
-
 public class MazeUtility {
     
     public static int[][] Convert2D(String str) {

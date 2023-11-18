@@ -1,11 +1,7 @@
-package mazesolverproject;
-
 public class Stack<T> {
     private Node<T> top;
     
-    public Stack() {
-        top = null;
-    }
+    public Stack() {top = null;}
     
     public boolean isEmpty() {
         if (top==null)
@@ -30,9 +26,7 @@ public class Stack<T> {
         Node<T> next = null;
         T data;
 
-        Node(T data){
-            this.data = data;
-        }
+        Node(T data){this.data = data;}
 
     }
 }
